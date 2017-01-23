@@ -1,0 +1,64 @@
+{% extends 'siteapp/base.html' %}
+{% block content %}
+<div class="title videos">
+    <h1>watch this</h1>
+</div>
+<div class="meat videos">
+    <div class="row">
+        <div class="three columns">
+            <div id="visualtitle">visual</div>
+            <div>
+                <ul class="listing" id="visual">
+                    <li><a href="{% url 'video' idnum=1 %}">videos</a></li>
+                    <li><a href="{% url 'photo' idnum=1 %}">photos</a></li>
+                </ul>
+            </div>
+            <div id="visualfooter">&#9813;</div>
+        </div>
+        <div class="nine columns" style="text-align: center;font-size:2em;">
+            {% if media %}
+                {% if video %}
+                <div class="row">
+                    {% if prev %}
+                    <div class="three columns"><a style="text-decoration: none;" href="{% url 'video' idnum=prev %}">&#9754;</a></div>
+                    {% endif %}
+                    <div class="six columns">{{video.title}}</div>
+                    {% if next %}
+                    <div class="three columns"><a style="text-decoration: none;" href="{% url 'video' idnum=next %}">&#9755;</a></div>
+                    {% endif %}
+                </div>
+                <div class="row">
+                    <div class="nine columns">
+                        <iframe class="video" id="youtube" width="500" height="300" src="{{video.youtube_link}}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div style="font-size: initial;height: 315px;overflow-y:scroll;" class="three columns">{{video.description}} </div>
+                </div>
+                {% endif %}
+                {% if photo %}
+                <div class="row">
+                    {% if prev %}
+                    <div class="three columns"><a style="text-decoration: none;" href="{% url 'photo' idnum=prev %}">&#9754;</a></div>
+                    {% endif %}
+                    <div class="six columns">{{photo.title}}</div>
+                    {% if next %}
+                    <div class="three columns"><a style="text-decoration: none;" href="{% url 'photo' idnum=next %}">&#9755;</a></div>
+                    {% endif %}
+                </div>
+                <div class="row">
+                    <div class="twelve columns">
+                        <div>No photos yet...</div>
+                    </div>
+                </div>
+                {% endif %}
+                {% if not_found %}
+                <div class="row">
+                    <div class="twelve columns">
+                        <div style="font-size:50%;">there's nothing here yet...</div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

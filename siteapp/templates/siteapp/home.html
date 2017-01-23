@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'siteapp/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'siteapp/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'siteapp/base.css' %}">
+    <link rel="stylesheet" href="{% static 'siteapp/home.css' %}">
+    {% if up %}
+    <link rel="stylesheet" href="{% static 'siteapp/up.css' %}">
+    {% endif %}
+    <script src="{% static 'siteapp/jquery-3.1.1.min.js' %}"></script>
+    <script src="{% static 'siteapp/base.js' %}"></script>
+    <script src="{% static 'siteapp/home.js' %}"></script>
+</head>
+<body>
+<div id="page">
+{% block content %}
+{% endblock %}
+</div>
+    {% include 'siteapp/navigation.html' %}
+    {% block nav %}
+    {% endblock %}
+<div id="feature">
+    <iframe style="border: 0; width: 20%; margin-left: 40%; height: 42px;" src="{{feature.link}}" seamless>{{feature.title}}</iframe>
+</div>
+</body>
+</html>

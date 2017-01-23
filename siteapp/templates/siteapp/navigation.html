@@ -1,0 +1,31 @@
+{% block nav %}
+{% load staticfiles %}
+<script src="{% static 'siteapp/jquery-3.1.1.min.js' %}"></script>
+<div id="canvas-container">
+    <svg height="200" width="375" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <path id="links" d="M 50 200 C 50,0 325,0 325,200"></path>
+        </defs>
+        <g id="navigation">
+            <use xlink:href="#links" fill="none"></use>
+            <text fill="#000">
+                <textPath text-anchor="middle" startOffset="50%" xlink:href="#links">
+                    <tspan id="one" col="Crimson"><a class="nav-links" url="{% url 'about' %}" xlink:href="{% url 'about' %}">&emsp;me&emsp;&ensp;</a></tspan>
+                    <tspan id="two" col="SeaGreen"><a class="nav-links" url="{% url 'music' %}" xlink:href="{% url 'music' %}">&ensp;&emsp;listen&emsp;&ensp;</a></tspan>
+                    <tspan id="three" col="RoyalBlue"><a class="nav-links" url="{% url 'media' %}" xlink:href="{% url 'media' %}">&ensp;&emsp;look&emsp;&ensp;</a></tspan>
+                    <tspan id="four" col="Tomato"><a class="nav-links" url="{% url 'social' %}" xlink:href="{% url 'social' %}">&ensp;&emsp;find&emsp;&ensp;</a></tspan>
+                    <tspan id="five" col="DarkOrchid"><a class="nav-links" url="{% url 'contact' %}" xlink:href="{% url 'contact' %}">&ensp;&emsp;talk&emsp;</a></tspan>
+                </textPath>
+            </text>
+        </g>
+        <a id="brand-div" href="#">
+            <g id="brand">
+                <text x="115" y="115">STAY</text>
+                <text x="145" y="145">IN</text>
+                <text x="90" y="180">SCHOOL</text>
+            </g>
+        </a>
+    </svg>
+</div>
+<script src="{% static 'siteapp/navigation.js' %}"></script>
+{% endblock %}

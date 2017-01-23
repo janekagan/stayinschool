@@ -1,0 +1,13 @@
+svg {
+    bottom: initial;
+    position: relative;
+}
+
+#canvas-container {
+    padding-top: 100px;
+}
+
+#feature {
+    opacity: 1;
+    margin: 0 auto;
+}

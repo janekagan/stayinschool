@@ -1,0 +1,37 @@
+{% extends 'siteapp/base.html' %}
+{% block content %}
+<div class="title contact">
+    <h1>thanks!</h1>
+</div>
+<div class="meat contact">
+    <p>your responses:</p>
+     <div class="row">
+         <div class="four columns">
+            <p><b>name: </b> {{ form_name }}</p>
+         </div>
+         <div class="four columns">
+            <p><b>email: </b> {{ form_email }}</p>
+         </div>
+         <div class="four columns">
+            <p><b>color:</b> {{ form_color }}</p>
+         </div>
+     </div>
+     <div class="row">
+         <div class="four columns">
+             <p><b>hero: </b> {{ form_hero }}</p>
+         </div>
+         <div class="four columns">
+             <p><b>simpsons ep: </b> {{ form_simpsons }}</p>
+         </div>
+         <div class="four columns">
+             <p><b>book: </b> {{ form_book }}</p>
+         </div>
+     </div>
+    <div class="twelve columns">
+        <p><b>message: </b><br/> {{ form_message }}</p>
+    </div>
+    <div>
+        <p>i'll get back to you...    <sub>eventually...</sub></p>
+    </div>
+</div>
+{% endblock %}

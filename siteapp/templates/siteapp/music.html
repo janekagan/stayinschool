@@ -1,0 +1,24 @@
+{% extends 'siteapp/base.html' %}
+{% block content %}
+<div class="title music">
+    <h1>listen here</h1>
+</div>
+<div class="meat music">
+    <div class="three columns">
+        <div id="albumstitle">albums</div>
+        <div>
+            <ul class="listing" id="albums">
+                {% for album in albums %}
+                <li class="album"><a href="{% url 'album' album.title %}">{{album.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="albumsfooter">&#x26A1;</div>
+    </div>
+    <div id="currentalbum"  class="nine columns">
+        <iframe style="border: 0; width: 100%; height: 208px;" src="{{curr_album.iframe}}" seamless>
+            {{curr_album.title}}
+        </iframe>
+    </div>
+</div>
+{% endblock %}

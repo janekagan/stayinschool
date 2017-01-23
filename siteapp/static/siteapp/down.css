@@ -1,0 +1,23 @@
+@keyframes dropnav {
+    0% {
+        transform: translateY(-60%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+#canvas-container {
+    animation-name: dropnav;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+}
+
+svg {
+    animation-name: dropnav;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+}
+

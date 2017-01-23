@@ -1,0 +1,45 @@
+{% extends 'siteapp/base.html' %}
+{% block content %}
+<div class="title contact">
+    <h1>spill</h1>
+</div>
+<div class="meat contact">
+    <form method="post" action="{% url 'thanks' %}">{% csrf_token %}
+        <div class="row">
+            <div class="four columns">
+                <label for="form_name">name</label>
+             <input class="u-full-width" placeholder="Awesome Human" id="form_name" name="form_name" type="text">
+            </div>
+            <div class="four columns">
+                <label for="form_email">email</label>
+                <input class="u-full-width" placeholder="awesome@human.com" id="form_email" name="form_email" type="email">
+            </div>
+            <div class="two columns">
+                <label for="form_color">favorite color</label>
+                <input class="u-full-width" placeholder="purple" id="form_color" name="form_color" type="color">
+            </div>
+        </div>
+        <div class="row">
+            <div class="four columns">
+                <label for="form_hero">biggest hero</label>
+                <input class="u-full-width" placeholder="my dog" id="form_hero" name="form_hero" type="text">
+            </div>
+            <div class="four columns">
+                <label for="form_simpsons">favorite simpsons episode</label>
+                <input class="u-full-width" placeholder="the one where apu has kids" name="form_simpsons" id="form_simpsons" type="text">
+            </div>
+            <div class="four columns">
+                <label for="form_book">book that changed your life</label>
+                <input class="u-full-width" placeholder="catch-22" id="form_book" name="form_book" type="text">
+            </div>
+        </div>
+        <label for="form_message">what would you like to say?</label>
+        <textarea class="u-full-width" placeholder="Now this is a story all about how my life got flipped, turned upside down …" name="form_message" id="form_message"></textarea>
+        <label class="example-send-yourself-copy">
+            <input type="checkbox" id="email_response" name="email_response">
+            <span class="label-body">Send a copy to yourself</span>
+        </label>
+        <input id="vcd" class="button-primary" value="vaya con dios" type="submit" />
+    </form>
+</div>
+{% endblock %}

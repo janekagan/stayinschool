@@ -1,0 +1,48 @@
+{% extends 'siteapp/base.html' %}
+{% block content %}
+{% load staticfiles %}
+<div class="title about">
+    <h1>who, why</h1>
+</div>
+<div class="meat about">
+    <div class="row">
+        <div class="five columns">
+            <div class="mn">
+                <p id="live">I live in minnesota.</p>
+                <img id="mn-img" width="320px" style="margin-left: 5%" src="{% static 'siteapp/minnesota.svg' %}"/>
+                <p id="songs">I like to write songs.</p>
+            </div>
+        </div>
+        <div class="seven columns">
+            <h5>the most important things:</h5>
+            <div class="row">
+            <div class="four columns">
+                <span style="font-weight: bold; text-decoration: underline; color:Crimson;">stuff i like to eat:</span>
+                <ul>
+                    <li>bagels</li>
+                    <li>sushi</li>
+                    <li>gummy vitamins</li>
+                </ul>
+            </div>
+            <div class="four columns">
+                <span style="font-weight: bold; text-decoration: underline; color:Crimson;">my hobbies</span>
+                <ul>
+                    <li>petting dogs</li>
+                    <li>reading wikipedia articles about serial killers</li>
+                    <li>sewing</li>
+                </ul>
+            </div>
+            <div class="four columns">
+                <span style="font-weight: bold; text-decoration: underline; color:Crimson;">pet peeves</span>
+                <ul>
+                    <li>the fact that I was born too early for self-driving cars</li>
+                </ul>
+            </div>
+            </div><div class="row">
+            <div class="twelve columns">
+                <p style="padding-top: 50px;">In real life, I program supercomputers and make stuff like this site.</p>
+            </div></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

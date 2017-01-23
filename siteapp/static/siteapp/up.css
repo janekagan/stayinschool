@@ -1,0 +1,37 @@
+@keyframes upnav {
+    0% {
+        transform: translateY(33%);
+    }
+    100% {
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#canvas-container {
+    animation-name: upnav;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+}
+
+svg {
+    animation-name: upnav;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+}
+
+#page {
+    animation-name: fadeout;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 0.4s;
+}

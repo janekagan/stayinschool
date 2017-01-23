@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'siteapp/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'siteapp/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'siteapp/base.css' %}">
+    {% if down %}
+    <link rel="stylesheet" href="{% static 'siteapp/down.css' %}">
+    {% endif %}
+    <script src="{% static 'siteapp/jquery-3.1.1.min.js' %}"></script>
+    <script src="{% static 'siteapp/base.js' %}"></script>
+</head>
+<body>
+<div id="page">
+{% block content %}
+{% endblock %}
+</div>
+{% include 'siteapp/navigation.html' %}
+{% block nav %}
+{% endblock %}
+</body>
+</html>
