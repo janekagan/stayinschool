@@ -140,9 +140,9 @@ EMAIL_USE_TLS = True
 ADMINS = [('Jane', 'jane@juststayinschool.com')]
 MANAGERS = [('Jane', 'jane@juststayinschool.com')]
 
-SECURE_CONTENT_TYPE_NOSNIFF = True
+#SECURE_CONTENT_TYPE_NOSNIFF = True
 
-SECURE_BROWSER_XSS_FILTER = True
+#SECURE_BROWSER_XSS_FILTER = True
 
 #SECURE_SSL_REDIRECT = True
 
